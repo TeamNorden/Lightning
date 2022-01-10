@@ -1,4 +1,4 @@
-![Norden Banner](assets/Norden-Banner.png)
+![Norden Banner](assets/Lightning-Banner.png)
 # Lightning
 
 Meet Lightning. 
