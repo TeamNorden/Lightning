@@ -1,0 +1,23 @@
+{
+  "name": "lighting",
+  "version": "0.0.0",
+  "description": "A Bot Framework For Revolt.JS",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TeamNorden/Lightning"
+  },
+  "author": "Fad F <90547391+FadTheChad@users.noreply.github.com>",
+  "license": "GNU GPLv3",
+  "private": false,
+  "files": [
+    "lib/**/*"
+  ],
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "revolt.js": "^5.2.3"
+  }
+}
