@@ -4,6 +4,7 @@
   "description": "A Bot Framework For Revolt.JS",
   "main": "lib/index.js",
   "scripts": {
+    "format": "prettier --write src/",
     "build": "tsc"
   },
   "repository": {
