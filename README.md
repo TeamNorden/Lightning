@@ -5,7 +5,7 @@ Meet Lightning.
 
 > A bot framework for [Revolt](https://revolt.chat). 
 
-It lets you as a developer focus on the things that matter, such as your user's feedback, and not handle the messy stuff; let Lightning handle that for you.
+This framework lets you, as a developer, focus on the things that matter, such as your user's feedback, and not handle the messy stuff; let Lightning handle that for you.
 
 To keep updated with the package and it's development, join the [Support Server](#support).
 
