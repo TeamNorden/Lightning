@@ -13,7 +13,7 @@
   },
   "author": "Fad F <90547391+FadTheChad@users.noreply.github.com>",
   "license": "GNU GPLv3",
-  "private": false,
+  "private": true,
   "files": [
     "lib/**/*"
   ],
