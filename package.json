@@ -23,6 +23,9 @@
     "revolt bot", 
     "bot framework"
   ],
+  "engines": {
+    "node": ">=16.6.0"
+  },
   "devDependencies": {
     "prettier": "^2.5.1",
     "revolt.js": "^5.2.3"
