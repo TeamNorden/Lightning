@@ -20,7 +20,7 @@ To keep updated with the package and it's development, join the [Support Server]
 ```cmd
 npm install lightning-js
 ```
-or
+or if you're using yarn
 ```cmd
 yarn add lightning-js
 ```
