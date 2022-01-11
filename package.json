@@ -17,6 +17,12 @@
   "files": [
     "lib/**/*"
   ],
+  "keywords": [
+    "revolt", 
+    "revolt.js", 
+    "revolt bot", 
+    "bot framework"
+  ],
   "devDependencies": {
     "prettier": "^2.5.1",
     "revolt.js": "^5.2.3"
