@@ -1,5 +1,6 @@
-# lib
+# lib and transpiled
 /lib
+/tests
 
 # Logs
 logs
