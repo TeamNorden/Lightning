@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "test": "tsc -p tsconfig.testing.json && mocha tests/*.js",
-    "format": "prettier --write src/",
+    "format": "prettier --write src/"
   },
   "repository": {
     "type": "git",
