@@ -31,3 +31,5 @@ const eventHandler = async (client: LTNClient) => {
         client.events.set(event.data.name, event)
     }
 }
+
+export default eventHandler
