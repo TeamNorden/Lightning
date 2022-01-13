@@ -19,8 +19,6 @@ const commandHandler = async (client: LTNClient) => {
 
             if (structureType == 'OBJECT') {
                 command = req.default as ICommand
-
-                client.commands.set(command.data.name, command)
             } else {
                 let CommandClass = req.default as Class<BaseCommand>
 
