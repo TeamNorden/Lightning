@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "A Bot Framework For Revolt.JS",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "tsc -p tsconfig.testing.json && mocha tests/*.js",
