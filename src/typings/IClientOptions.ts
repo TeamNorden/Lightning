@@ -7,13 +7,13 @@ enum Strictness {
 export type StructureType = 'OBJECT' | 'DECORATORS' | 'CLASS'
 
 export interface IClientConfig {
-    structureType: StructureType,
-    typescript: boolean,
+    structureType: StructureType
+    typescript: boolean
     strictness?: Strictness
 }
 
 export default interface IClientOptions {
-    commandsDir: string,
-    eventsDir: string,
+    commandsDir: string
+    eventsDir: string
     config: IClientConfig
 }

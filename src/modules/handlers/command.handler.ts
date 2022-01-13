@@ -10,7 +10,9 @@ const commandHandler = async (client: LTNClient) => {
     const { structureType } = client.config
 
     for (let folder of categories) {
-        let folderFiles = readdirSync(folder).filter(file => ['js', 'ts'].includes(path.extname(file)))
+        let folderFiles = readdirSync(folder).filter((file) =>
+            ['js', 'ts'].includes(path.extname(file))
+        )
 
         for (let file of folderFiles) {
             let req = await import(file)
@@ -25,7 +27,9 @@ const commandHandler = async (client: LTNClient) => {
                 command = new CommandClass()
 
                 if (!(command instanceof BaseCommand)) {
-                    throw new TypeError(`Command ${command.data.name}doesn't seem to be an instance of BaseCommand. Did you forget extending it?`)
+                    throw new TypeError(
+                        `Command ${command.data.name}doesn't seem to be an instance of BaseCommand. Did you forget extending it?`
+                    )
                 }
             }
 

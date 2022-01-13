@@ -1,3 +1,3 @@
 // soon
 
-class Logger { }
+class Logger {}

@@ -1,18 +1,15 @@
 import { LTNClient } from '../client'
 
 export interface IEventData {
-    name: string,
+    name: string
     once?: boolean
 }
 
 export interface IEventExec {
-    (
-        client: LTNClient,
-        ...args: string[]
-    ): any
+    (client: LTNClient, ...args: string[]): any
 }
 
 export default interface IEvent {
-    data: IEventData,
+    data: IEventData
     exec: IEventExec
 }

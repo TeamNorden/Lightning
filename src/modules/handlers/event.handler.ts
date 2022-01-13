@@ -22,7 +22,9 @@ const eventHandler = async (client: LTNClient) => {
             event = new EventClass()
 
             if (!(event instanceof BaseEvent)) {
-                throw new TypeError(`Command ${event.data.name}doesn't seem to be an instance of BaseEvent. Did you forget extending it?`)
+                throw new TypeError(
+                    `Command ${event.data.name}doesn't seem to be an instance of BaseEvent. Did you forget extending it?`
+                )
             }
         }
 

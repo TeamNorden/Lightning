@@ -8,7 +8,6 @@ import BaseEvent from '../bases/event/BaseEvent'
 import { Client, ClientOptions as RevoltOptions } from 'revolt.js'
 
 export class LTNClient extends Client {
-
     // Commands And Events
     public commands = new Map<string, ICommand | BaseCommand>()
     public events = new Map<string, IEvent | BaseEvent>()
