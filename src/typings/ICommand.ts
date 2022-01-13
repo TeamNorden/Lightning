@@ -1,5 +1,5 @@
-import { Client } from 'revolt.js'
 import { Message } from 'revolt.js/dist/maps/Messages'
+import { LTNClient } from '../client'
 
 export interface ICommandData {
     name: string,
@@ -10,7 +10,7 @@ export interface ICommandData {
 }
 
 export interface ICommandExec {
-    (client: Client, message: Message, args: string[]): any
+    (client: LTNClient, message: Message, args: string[]): any
 }
 
 export default interface ICommand {
