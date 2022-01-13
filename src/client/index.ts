@@ -3,12 +3,14 @@ import BaseCommand from '../bases/command/BaseCommand'
 import IClientOptions, { IClientConfig } from '../typings/IClientOptions'
 import { readdirSync } from 'fs'
 import commandHandler from '../modules/handlers/command.handler'
+import IEvent from '../typings/IEvent'
+import BaseEvent from '../bases/event/BaseEvent'
 
 export class LTNClient {
 
     // Commands And Events
     public commands = new Map<string, ICommand | BaseCommand>()
-    public events = new Map<string, object>()
+    public events = new Map<string, IEvent | BaseEvent>()
 
     // Directories
     public readonly commandDir: string
