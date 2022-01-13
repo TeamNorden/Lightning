@@ -5,8 +5,9 @@ import { readdirSync } from 'fs'
 import commandHandler from '../modules/handlers/command.handler'
 import IEvent from '../typings/IEvent'
 import BaseEvent from '../bases/event/BaseEvent'
+import { Client, ClientOptions as RevoltOptions } from 'revolt.js'
 
-export class LTNClient {
+export class LTNClient extends Client {
 
     // Commands And Events
     public commands = new Map<string, ICommand | BaseCommand>()
@@ -25,7 +26,9 @@ export class LTNClient {
     // Handlers
     private _loadCommands = commandHandler
 
-    constructor(options: IClientOptions) {
+    constructor(options: IClientOptions, revoltOptions: RevoltOptions) {
+        super(revoltOptions)
+
         this.commandDir = options.commandsDir
         this.eventDir = options.eventsDir
 
