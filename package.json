@@ -36,6 +36,7 @@
     "revolt.js": "^5.2.3"
   },
   "dependencies": {
+    "chalk": "^5.0.0",
     "type-fest": "^2.9.0"
   }
 }
