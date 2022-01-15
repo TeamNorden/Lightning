@@ -1,12 +1,21 @@
-import ICommand from '../typings/ICommand'
-import BaseCommand from '../bases/command/BaseCommand'
-import { IClientOptions, IClientConfig } from '../typings/IClientOptions'
-import { readdirSync } from 'fs'
-import commandHandler from '../modules/handlers/command.handler'
-import IEvent from '../typings/IEvent'
-import BaseEvent from '../bases/event/BaseEvent'
 import { Client, ClientOptions as RevoltOptions } from 'revolt.js'
+
+import { readdirSync } from 'fs'
+
+// Bases
+import BaseCommand from '../bases/command/BaseCommand'
+import BaseEvent from '../bases/event/BaseEvent'
+
+// Typings
+import {
+    IClientOptions, IClientConfig,
+    ICommand,
+    IEvent
+} from '../typings'
+
+// Handlers
 import eventHandler from '../modules/handlers/event.handler'
+import commandHandler from '../modules/handlers/command.handler'
 
 export class LTNClient extends Client {
     // Commands And Events
