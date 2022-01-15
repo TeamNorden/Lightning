@@ -1,7 +1,9 @@
 import { LTNClient } from '../../client'
 import { readdirSync } from 'fs'
-import IEvent from '../../typings/IEvent'
+
+import { IEvent } from '../../typings'
 import BaseEvent from '../../bases/event/BaseEvent'
+
 import { Class } from 'type-fest'
 
 const eventHandler = async (client: LTNClient) => {

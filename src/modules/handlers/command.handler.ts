@@ -1,9 +1,12 @@
 import fs, { readdirSync } from 'fs'
 import path from 'path'
+
 import { LTNClient } from '../../client'
-import ICommand from '../../typings/ICommand'
-import { Class } from 'type-fest'
+
+import { ICommand } from '../../typings'
 import BaseCommand from '../../bases/command/BaseCommand'
+
+import { Class } from 'type-fest'
 
 const commandHandler = async (client: LTNClient) => {
     const { categories } = client
