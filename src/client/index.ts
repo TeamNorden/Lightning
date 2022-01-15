@@ -7,7 +7,7 @@ import BaseCommand from '../bases/command/BaseCommand'
 import BaseEvent from '../bases/event/BaseEvent'
 
 // Typings
-import { IClientOptions, IClientConfig, ICommand, IEvent } from '../typings'
+import { IClientConfig, IClientOptions, ICommand, IEvent, Strictness } from '../typings'
 
 // Handlers
 import eventHandler from '../modules/handlers/event.handler'
@@ -51,7 +51,17 @@ export class LTNClient extends Client {
         this.logger = new (options.logger?.class ?? LTNLogger)(options.logger?.options ?? {
             primary: [209, 35, 49],
             secondary: [255, 87, 87]
-        })
+        }, this.config.strictness ?? Strictness.MODERATE)
+    }
+
+    public matchTypes = (type: string, element: any) => {
+        if (type === 'ARRAY' && Array.isArray(type)) return
+
+        if (typeof element === type.toLowerCase()) return
+
+        this.logger.error(
+            `'${element}' is supposed to be of type '${type.toUpperCase()}'`
+        )
     }
 
     public async start(token: string, silent: boolean = true) {
