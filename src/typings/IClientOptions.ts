@@ -4,7 +4,7 @@ enum Strictness {
     'LOW'
 }
 
-export type StructureType = 'OBJECT' | 'DECORATORS' | 'CLASS'
+export type StructureType = 'OBJECT' | 'DECORATOR' | 'CLASS'
 
 export interface IClientConfig {
     structureType: StructureType
