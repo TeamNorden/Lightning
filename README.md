@@ -38,11 +38,11 @@ If you want to start from scratch, here's an example on how you could start:
     import path from 'path'
 
     const client = new LTNClient({
-        commandsDir: path.join(__dirname, 'commands')
-        eventsDir: path.join(__dirname, 'events')
+        commandsDir: path.join(__dirname, 'commands'),
+        eventsDir: path.join(__dirname, 'events'),
         config: {
-            structureType: 'OBJECT' // OBJECT | CLASS | DECORATOR
-            typescript: true
+            structureType: 'OBJECT', // OBJECT | CLASS | DECORATOR
+            typescript: true,
             strictness: Strictness.MODERATE   
         }
     })
