@@ -1,4 +1,4 @@
-import { IEventData } from '../../typings/IEvent'
+import { IEventData } from '../../typings'
 import { Class } from 'type-fest'
 import BaseEvent from './BaseEvent'
 

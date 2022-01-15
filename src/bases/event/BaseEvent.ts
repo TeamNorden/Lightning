@@ -1,4 +1,4 @@
-import IEvent, { IEventData, IEventExec } from '../../typings/IEvent'
+import { IEvent, IEventData, IEventExec } from '../../typings/IEvent'
 
 class BaseEvent implements IEvent {
     public data!: IEventData
