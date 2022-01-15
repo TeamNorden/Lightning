@@ -9,7 +9,7 @@ export interface IEventExec {
     (client: LTNClient, ...args: string[]): any
 }
 
-export default interface IEvent {
+export interface IEvent {
     data: IEventData
     exec: IEventExec
 }

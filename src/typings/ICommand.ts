@@ -13,7 +13,7 @@ export interface ICommandExec {
     (client: LTNClient, message: Message, args: string[]): any
 }
 
-export default interface ICommand {
+export interface ICommand {
     data: ICommandData
     exec: ICommandExec
 }
