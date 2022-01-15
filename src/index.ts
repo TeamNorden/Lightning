@@ -1,6 +1,6 @@
 /*
-* Bases
-*/
+ * Bases
+ */
 export * from './bases/command'
 export * from './bases/event'
 

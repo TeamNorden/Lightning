@@ -7,11 +7,7 @@ import BaseCommand from '../bases/command/BaseCommand'
 import BaseEvent from '../bases/event/BaseEvent'
 
 // Typings
-import {
-    IClientOptions, IClientConfig,
-    ICommand,
-    IEvent
-} from '../typings'
+import { IClientOptions, IClientConfig, ICommand, IEvent } from '../typings'
 
 // Handlers
 import eventHandler from '../modules/handlers/event.handler'

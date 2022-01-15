@@ -3,5 +3,7 @@ const matchTypes = (element: any, type: string) => {
 
     if (typeof element === type.toLowerCase()) return
 
-    throw new TypeError(`'${element}' is supposed to be of type '${type.toUpperCase()}'`)
+    throw new TypeError(
+        `'${element}' is supposed to be of type '${type.toUpperCase()}'`
+    )
 }
