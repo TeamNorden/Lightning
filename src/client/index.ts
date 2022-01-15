@@ -1,6 +1,6 @@
 import ICommand from '../typings/ICommand'
 import BaseCommand from '../bases/command/BaseCommand'
-import IClientOptions, { IClientConfig } from '../typings/IClientOptions'
+import { IClientOptions, IClientConfig } from '../typings/IClientOptions'
 import { readdirSync } from 'fs'
 import commandHandler from '../modules/handlers/command.handler'
 import IEvent from '../typings/IEvent'

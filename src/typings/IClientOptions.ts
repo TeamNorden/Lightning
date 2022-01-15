@@ -1,4 +1,4 @@
-enum Strictness {
+export enum Strictness {
     'HIGH',
     'MODERATE',
     'LOW'
@@ -12,7 +12,7 @@ export interface IClientConfig {
     strictness?: Strictness
 }
 
-export default interface IClientOptions {
+export interface IClientOptions {
     commandsDir: string
     eventsDir: string
     config: IClientConfig
