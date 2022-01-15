@@ -1,5 +1,5 @@
 import { Class } from 'type-fest'
-import { ICommandData } from '../../typings/ICommand'
+import { ICommandData } from '../../typings'
 import BaseCommand from './BaseCommand'
 
 const command = (data: ICommandData) => {
