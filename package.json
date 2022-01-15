@@ -1,5 +1,5 @@
 {
-  "name": "lighting",
+  "name": "lightning",
   "version": "0.0.0",
   "description": "A Bot Framework For Revolt.JS",
   "main": "lib/index.js",
