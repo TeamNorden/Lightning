@@ -37,3 +37,5 @@ Err: ${err}`,
         }
     }
 }
+
+export default Database

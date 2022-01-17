@@ -23,6 +23,9 @@ import messageHandler from '../modules/handlers/message.handler'
 // Utils
 import LTNLogger from '../modules/utils/Logger'
 
+// Database
+import Database from '../modules/database'
+
 export class LTNClient extends Client {
     // Commands And Events
     public commands = new Map<string, ICommand | BaseCommand>()
@@ -32,7 +35,7 @@ export class LTNClient extends Client {
     public prefix = '!'
 
     // Database Support (soon)
-    public db!: {}
+    public db!: Database
 
     // Directories
     public readonly commandDir: string
