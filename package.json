@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "chalk": "^5.0.0",
+    "mongoose": "^6.1.7",
     "type-fest": "^2.9.0"
   }
 }
