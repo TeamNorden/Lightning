@@ -31,6 +31,9 @@ export class LTNClient extends Client {
     // Prefix (default: '!')
     public prefix = '!'
 
+    // Database Support (soon)
+    public db!: {}
+
     // Directories
     public readonly commandDir: string
     public readonly eventDir: string
