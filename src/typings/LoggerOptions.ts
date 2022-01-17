@@ -1,6 +1,12 @@
 export type RGBColor = [number, number, number]
 
-export type LTNLoggerType = 'LOGIN' | 'COMMAND' | 'EVENT' | 'READY' | 'LOAD' | 'DATABASE'
+export type LTNLoggerType =
+    | 'LOGIN'
+    | 'COMMAND'
+    | 'EVENT'
+    | 'READY'
+    | 'LOAD'
+    | 'DATABASE'
 
 export type LTNLoggerUtilsType = 'ERROR' | 'WARN'
 
