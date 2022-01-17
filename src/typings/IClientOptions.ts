@@ -28,9 +28,16 @@ export interface IClientLoggerOptions {
     options?: LTNLoggerOptions
 }
 
+export interface IClientDBOptions {
+    uri: string
+    caching?: boolean
+    typegoose?: boolean
+}
+
 export interface IClientOptions {
     commandsDir: string
     eventsDir: string
     config: IClientConfig
     logger?: IClientLoggerOptions
+    database?: IClientDBOptions
 }
