@@ -30,6 +30,7 @@ export interface IClientLoggerOptions {
 
 export interface IClientDBOptions {
     uri: string
+    dbFunctionsDir: string
     caching?: boolean
     typegoose?: boolean
 }
