@@ -19,7 +19,7 @@ To keep updated with the package and it's development, join the [Support Server]
 ## Default Lighting Project Structure (Recommended For Beginners)
 - Simply install Lightning via the following
 ```cmd
-npm install lightning-js
+npm i lightning-js
 ```
 or if you're using yarn
 ```cmd
@@ -43,7 +43,7 @@ If you want to start from scratch, here's an example on how you could start:
         config: {
             structureType: 'OBJECT', // OBJECT | CLASS | DECORATOR
             typescript: true,
-            strictness: Strictness.MODERATE   
+            strictness: Strictness.MODERATE // HIGH | MODERATE | LOW
         }
     })
 
