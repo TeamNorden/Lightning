@@ -19,11 +19,11 @@ To keep updated with the package and it's development, join the [Support Server]
 ## Default Lighting Project Structure (Recommended For Beginners)
 - Simply install Lightning via the following
 ```cmd
-npm i lightning-js
+npm i lightning
 ```
 or if you're using yarn
 ```cmd
-yarn add lightning-js
+yarn add lightning
 ```
 
 - Create a new Lightning project
