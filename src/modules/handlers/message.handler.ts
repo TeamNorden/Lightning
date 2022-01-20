@@ -25,10 +25,7 @@ const messageHandler = (
 
         if (!(guard.name in command.data.guards)) continue
 
-        if (
-            command.data.guards[guard.name]
-            && !guard.check(message)
-        ) {
+        if (command.data.guards[guard.name] && !guard.check(message)) {
             if (guard.failMsg) message.channel?.sendMessage(guard.failMsg)
             return
         }
