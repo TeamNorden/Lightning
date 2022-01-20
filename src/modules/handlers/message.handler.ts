@@ -20,6 +20,20 @@ const messageHandler = (
 
     if (!command) return
 
+    for (const guard of client.config.commandGuards!) {
+        if (!command.data.guards) break
+
+        if (!(guard.name in command.data.guards)) continue
+
+        if (
+            command.data.guards[guard.name]
+            && !guard.check(message)
+        ) {
+            if (guard.failMsg) message.channel?.sendMessage(guard.failMsg)
+            return
+        }
+    }
+
     try {
         command.exec(client, message, args)
     } catch (err) {
