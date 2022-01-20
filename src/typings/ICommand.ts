@@ -4,6 +4,7 @@ import { LTNClient } from '../client'
 export interface ICommandGuard {
     name: string
     check: (message: Message) => boolean
+    failMsg?: string
 }
 
 export interface ICommandData {
@@ -12,6 +13,7 @@ export interface ICommandData {
     aliases: string | string[]
     category: string
     devOnly?: boolean
+    guards?: { [key: ICommandGuard['name']]: boolean }
 }
 
 export interface ICommandExec {
@@ -19,6 +21,6 @@ export interface ICommandExec {
 }
 
 export interface ICommand {
-    data: ICommandData & { [key: ICommandGuard['name']]: boolean }
+    data: ICommandData
     exec: ICommandExec
 }
