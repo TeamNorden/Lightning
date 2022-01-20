@@ -1,4 +1,4 @@
-import { ICommand, ICommandData, ICommandExec } from '../../typings/ICommand'
+import { ICommand, ICommandData, ICommandExec } from '../../typings'
 
 class BaseCommand implements ICommand {
     public data!: ICommandData
