@@ -1,6 +1,6 @@
 {
   "name": "lightning",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A Bot Framework For Revolt.JS",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -23,7 +23,8 @@
     "revolt",
     "revolt.js",
     "revolt bot",
-    "bot framework"
+    "bot framework",
+    "revolt app"
   ],
   "engines": {
     "node": ">=16.6.0"
