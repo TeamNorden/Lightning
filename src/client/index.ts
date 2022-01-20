@@ -71,6 +71,8 @@ export class LTNClient extends Client {
 
         this.config = options.config
 
+        if (!this.config.commandGuards) this.config.commandGuards = []
+
         if (
             !this.config.messageHandler ||
             this.config.messageHandler === 'DEFAULT'
