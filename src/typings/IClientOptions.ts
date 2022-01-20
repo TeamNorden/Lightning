@@ -3,6 +3,7 @@ import { Class } from 'type-fest'
 import { LTNLoggerOptions } from './LoggerOptions'
 import { Message } from 'revolt.js/dist/maps/Messages'
 import { LTNClient } from '../client'
+import { ICommandGuard } from './ICommand'
 
 export enum Strictness {
     'HIGH',
@@ -21,6 +22,7 @@ export interface IClientConfig {
         | ((client: LTNClient, message: Message, args?: string[]) => any)
         | 'DEFAULT'
         | 'NONE'
+    commandGuards?: ICommandGuard[]
 }
 
 export interface IClientLoggerOptions {
