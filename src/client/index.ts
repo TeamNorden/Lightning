@@ -86,6 +86,8 @@ export class LTNClient extends Client {
             },
             this.config.strictness ?? Strictness.MODERATE
         )
+
+        if (options.database) this.db = new Database(options.database, this)
     }
 
     public matchTypes = (type: string, element: any) => {
@@ -108,6 +110,7 @@ export class LTNClient extends Client {
             )
 
         await this.loginBot(token)
+        await this.db.connect()
 
         if (!silent)
             this.logger.log('LOGIN', 'Bot has logged in! Thanks for using LTN!')
