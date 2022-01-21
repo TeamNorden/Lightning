@@ -27,8 +27,7 @@ const commandHandler = async (client: LTNClient) => {
 
                 if (command instanceof BaseCommand) {
                     client.logger.error(
-                        `Command ${command.data.name} doesn't seem to be an Object. Did you use a Class?`,
-                        'COMMAND'
+                        `Command ${command.data.name} doesn't seem to be an Object. Did you use a Class?`
                     )
                 }
             } else {
@@ -38,22 +37,19 @@ const commandHandler = async (client: LTNClient) => {
 
                 if (!(command instanceof BaseCommand)) {
                     return client.logger.error(
-                        `Command ${command.data.name} doesn't seem to be an instance of BaseCommand`,
-                        'COMMAND'
+                        `Command ${command.data.name} doesn't seem to be an instance of BaseCommand`
                     )
                 }
 
                 if (structureType === 'DECORATOR' && !command._fromDecorator) {
                     return client.logger.error(
-                        `Command ${command.data.name} does not seem to be a decorator command`,
-                        'COMMAND'
+                        `Command ${command.data.name} does not seem to be a decorator command`
                     )
                 }
 
                 if (structureType === 'CLASS' && command._fromDecorator) {
                     return client.logger.error(
-                        `Command ${command.data.name} doesn't seem to be Class Command`,
-                        'COMMAND'
+                        `Command ${command.data.name} doesn't seem to be Class Command`
                     )
                 }
             }
