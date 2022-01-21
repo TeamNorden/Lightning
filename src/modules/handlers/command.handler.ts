@@ -24,14 +24,36 @@ const commandHandler = async (client: LTNClient) => {
 
             if (structureType == 'OBJECT') {
                 command = req.default as ICommand
+
+                if (command instanceof BaseCommand) {
+                    client.logger.error(
+                        `Command ${command.data.name} doesn't seem to be an Object. Did you use a Class?`,
+                        'COMMAND'
+                    )
+                }
             } else {
                 let CommandClass = req.default as Class<BaseCommand>
 
                 command = new CommandClass()
 
                 if (!(command instanceof BaseCommand)) {
-                    throw new TypeError(
-                        `Command ${command.data.name}doesn't seem to be an instance of BaseCommand. Did you forget extending it?`
+                    return client.logger.error(
+                        `Command ${command.data.name} doesn't seem to be an instance of BaseCommand`,
+                        'COMMAND'
+                    )
+                }
+
+                if (structureType === 'DECORATOR' && !command._fromDecorator) {
+                    return client.logger.error(
+                        `Command ${command.data.name} does not seem to be a decorator command`,
+                        'COMMAND'
+                    )
+                }
+
+                if (structureType === 'CLASS' && command._fromDecorator) {
+                    return client.logger.error(
+                        `Command ${command.data.name} doesn't seem to be Class Command`,
+                        'COMMAND'
                     )
                 }
             }
