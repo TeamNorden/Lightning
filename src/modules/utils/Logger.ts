@@ -69,7 +69,7 @@ class LTNLogger {
 
         let data =
             '[' +
-            errColour(errType ? errType.toUpperCase() + '_ERR' : 'ERR') +
+            errColour(errType ? errType.toUpperCase() + '_ERR' : 'LTN_ERR') +
             '] ' +
             errColour(err)
 
@@ -88,7 +88,7 @@ class LTNLogger {
 
         let data =
             '[' +
-            warnColour(warnType ? warnType.toUpperCase() + '_WARN' : 'WARN') +
+            warnColour(warnType ? warnType.toUpperCase() + '_WARN' : 'LTN_WARN') +
             '] ' +
             warnColour(err)
 
