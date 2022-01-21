@@ -14,16 +14,18 @@ class Database {
 
     public mongooseObj!: typeof mongoose
 
-    constructor(options: IClientDBOptions & { client: LTNClient }) {
+    constructor(options: IClientDBOptions, client: LTNClient) {
         this._uri = options.uri
 
         this.dbFunctionsDir = options.dbFunctionsDir
 
-        this.client = options.client
+        this.client = client
 
         this.caching = options.caching ?? true
         this.typegoose = options.typegoose ?? false
+    }
 
+    public connect = () => {
         try {
             mongoose.connect(this._uri).then((obj) => {
                 this.mongooseObj = obj
