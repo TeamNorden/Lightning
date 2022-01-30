@@ -44,6 +44,11 @@ If you want to start from scratch, here's an example on how you could start:
             structureType: 'OBJECT', // OBJECT | CLASS | DECORATOR
             typescript: true,
             strictness: Strictness.MODERATE // HIGH | MODERATE | LOW
+        },
+        database: { // optional
+            caching: true, // if you want local cache
+            typegoose: true, // if you're using typegoose
+            uri: 'mongodb connection string'
         }
     })
 
