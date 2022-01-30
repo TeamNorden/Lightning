@@ -63,7 +63,7 @@ export class LTNClient extends Client {
         })
     }
 
-    constructor(options: IClientOptions, revoltOptions: RevoltOptions) {
+    constructor(options: IClientOptions, revoltOptions?: RevoltOptions) {
         super(revoltOptions)
 
         this.commandDir = options.commandsDir
