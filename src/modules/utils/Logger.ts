@@ -2,6 +2,18 @@ import chalk from 'chalk'
 import { LTNLoggerOptions, LTNLoggerType } from '../../typings/LoggerOptions'
 import { Strictness } from '../../typings'
 
+/**
+ * @description A Logging Util used by Lightning | Also extendable
+ * @example
+ * import { LTNLogger, Strictness } from 'lightning'
+ *
+ * const customLogger = new LTNLogger({
+ *     primary: [255, 0, 0],
+ *     secondary: [0, 0, 0]
+ * }, Strictness.MODERATE)
+ *
+ * customLogger.warn('Test Warn')
+ */
 class LTNLogger {
     public colours: LTNLoggerOptions
     public strictness: Strictness

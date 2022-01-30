@@ -26,6 +26,9 @@ import LTNLogger from '../modules/utils/Logger'
 // Database
 import Database from '../modules/database'
 
+/**
+ * @description Custom Client For Lightning!
+ */
 export class LTNClient extends Client {
     // Commands And Events
     public commands = new Map<string, ICommand | BaseCommand>()
