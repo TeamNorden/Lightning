@@ -25,7 +25,7 @@ class Database {
         this.typegoose = options.typegoose ?? false
     }
 
-    public connect = () => {
+    public connect = async () => {
         try {
             mongoose.connect(this._uri).then((obj) => {
                 this.mongooseObj = obj
