@@ -78,7 +78,7 @@ class LTNLogger {
         if (crashOnErr === undefined)
             crashOnErr = this.strictness === Strictness.HIGH
 
-        // If the user made the config Strict, crash on recieving an err unless specifically told not to
+        // If the user made the config Strict, crash on receiving an err unless specifically told not to
         if (crashOnErr) process.exit(1)
     }
 
