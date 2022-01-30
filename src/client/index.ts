@@ -37,6 +37,8 @@ export class LTNClient extends Client {
     // Database Support (soon)
     public db!: Database
 
+    public status: 'CONNECTED' | 'DISCONNECTED' = 'DISCONNECTED'
+
     // Directories
     public readonly commandDir: string
     public readonly eventDir: string
@@ -110,6 +112,8 @@ export class LTNClient extends Client {
             )
 
         await this.loginBot(token)
+        this.status = 'CONNECTED'
+
         await this.db.connect()
 
         if (!silent)
