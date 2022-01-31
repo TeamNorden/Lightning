@@ -54,6 +54,8 @@ If you want to start from scratch, here's an example on how you could start:
 
     client.start('your token')
 ```
+## Still Confused
+Check out the [Examples](examples) folder for more help on how to start!
 
 # Contributors
 @Codeize
