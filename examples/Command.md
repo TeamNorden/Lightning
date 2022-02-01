@@ -87,17 +87,17 @@ module.exports = ExampleCommand
 ### Typescript
 
 ```typescript
-    import { BaseCommand, command } from 'lightning'
+import { BaseCommand, command } from 'lightning'
 
-    @command({
-        name: 'command-name',
-        description: 'This command is an example!',
-        aliases: ['alias'],
-        category: 'misc'
-    })
-    class ExampleCommand extends BaseCommand {
-        public exec = (client, message, args) => {
-            message.channel!.sendMessage('Hello There!')
-        }
+@command({
+    name: 'command-name',
+    description: 'This command is an example!',
+    aliases: ['alias'],
+    category: 'misc'
+})
+class ExampleCommand extends BaseCommand {
+    public exec = (client, message, args) => {
+        message.channel!.sendMessage('Hello There!')
     }
+}
 ```
