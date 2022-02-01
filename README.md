@@ -46,9 +46,9 @@ If you want to start from scratch, here's an example on how you could start:
             strictness: Strictness.MODERATE // HIGH | MODERATE | LOW
         },
         database: { // optional
+            uri: 'mongodb connection string'
             caching: true, // if you want local cache
             typegoose: true, // if you're using typegoose
-            uri: 'mongodb connection string'
         }
     })
 
