@@ -117,7 +117,7 @@ export class LTNClient extends Client {
         await this.loginBot(token)
         this.status = 'CONNECTED'
 
-        await this.db.connect()
+        await this.db?.connect()
 
         if (!silent)
             this.logger.log('LOGIN', 'Bot has logged in! Thanks for using LTN!')
