@@ -25,7 +25,7 @@ export default command
 ### Javascript
 
 ```javascript
-module.exports = {
+const command = {
     data: {
         name: 'command-name',
         description: 'This command is an example!',
@@ -36,6 +36,8 @@ module.exports = {
         message.channel.sendMessage('Hello There!')
     }
 }
+
+export default command
 ```
 
 ## Class
@@ -63,7 +65,7 @@ export default ExampleCommand
 ### Javascript
 
 ```javascript
-const { BaseCommand } = require('lightning')
+import { BaseCommand } from 'lightning'
 
 class ExampleCommand extends BaseCommand {
     data = {
@@ -78,7 +80,7 @@ class ExampleCommand extends BaseCommand {
     }
 }
 
-module.exports = ExampleCommand
+export default ExampleCommand
 ```
 
 ## Decorator
