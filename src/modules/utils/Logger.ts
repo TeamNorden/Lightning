@@ -42,15 +42,13 @@ class LTNLogger {
         newLineBefore?: boolean
     ) => {
         let colourOfType =
-            this.colours[type.toLowerCase() as keyof LTNLoggerOptions]!
+            this.colours[(['PRIMARY', 'SECONDARY'].includes(type.toUpperCase()) ? type.toLowerCase() : type.toUpperCase()) as keyof LTNLoggerOptions]!
 
         let chalkColour = chalk.rgb(...colourOfType)
 
         let typeTitle = chalkColour(
             type
                 .trim()
-                .split(/(?=[A-Z])/)
-                .join('_')
                 .toUpperCase()
         )
 
