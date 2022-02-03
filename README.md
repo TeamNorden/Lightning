@@ -54,6 +54,11 @@ If you want to start from scratch, here's an example on how you could start:
 
     client.start('your token')
 ```
+
+Lightning is fully ESM, so `require()` syntax cannot be used.
+
+To run on javascript use the `node --experimental-specifier-resolution=node <file>` flag!
+
 ## Still Confused
 Check out the [Examples](examples) folder for more help on how to start!
 
