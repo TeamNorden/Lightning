@@ -7,18 +7,22 @@ import { ICommand } from '../../typings'
 import BaseCommand from '../../bases/command/BaseCommand'
 
 import { Class } from 'type-fest'
+import { pathToFileURL } from 'url'
 
 const commandHandler = async (client: LTNClient) => {
-    const { categories } = client
+    const { categories, commandDir } = client
     const { structureType } = client.config
 
     for (let folder of categories) {
-        let folderFiles = readdirSync(folder).filter((file) =>
-            ['js', 'ts'].includes(path.extname(file))
+        let folderFiles = readdirSync(path.join(commandDir, folder)).filter((file) => {
+                return ['.js', '.ts'].includes(path.extname(file)) && !file.endsWith('.d.ts')
+            }
         )
 
         for (let file of folderFiles) {
-            let req = await import(file)
+            let filePath = pathToFileURL(path.join(commandDir, folder, file)).toString()
+
+            let req = await import(filePath)
 
             let command: ICommand | BaseCommand
 

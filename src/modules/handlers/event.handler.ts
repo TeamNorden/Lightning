@@ -5,14 +5,21 @@ import { IEvent } from '../../typings'
 import BaseEvent from '../../bases/event/BaseEvent'
 
 import { Class } from 'type-fest'
+import path from 'path'
+import { pathToFileURL } from 'url'
 
 const eventHandler = async (client: LTNClient) => {
+    const { eventDir } = client
     const { structureType } = client.config
 
-    let eventFiles = readdirSync(client.eventDir)
+    let eventFiles = readdirSync(client.eventDir).filter((file) =>
+        ['.js', '.ts'].includes(path.extname(file)) && !file!.endsWith('d.ts')
+    )
 
     for (let file of eventFiles) {
-        let req = await import(file)
+        let filePath = pathToFileURL(path.join(eventDir, file)).toString()
+
+        let req = await import(filePath)
 
         let event: IEvent | BaseEvent
 
