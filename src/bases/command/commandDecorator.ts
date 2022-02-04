@@ -8,7 +8,7 @@ const command: (data: ICommandData) => (Target: Class<BaseCommand>) => any = (
     let main = (Target: Class<BaseCommand>) => {
         return class extends Target {
             constructor(...args: any[]) {
-                super(data, true, ...args)
+                super(data, undefined, true, ...args)
             }
         }
     }

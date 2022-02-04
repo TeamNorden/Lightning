@@ -1,11 +1,20 @@
-import { IEvent, IEventData, IEventExec } from '../../typings/IEvent'
+import { IClassBasedEventExec, IEvent, IEventData } from '../../typings'
+import { LTNClient } from '../../client'
 
 class BaseEvent implements IEvent {
-    public data!: IEventData
-    public exec!: IEventExec
+    readonly _fromDecorator!: boolean
 
-    constructor(data?: IEventData) {
+    public data!: IEventData
+    public exec!: IClassBasedEventExec
+
+    public client!: LTNClient
+
+    constructor(data?: IEventData, client?: LTNClient, fromDecorator?: boolean) {
         if (data) this.data = data
+
+        if (client) this.client = client
+
+        this._fromDecorator = fromDecorator ?? false
     }
 }
 

@@ -6,7 +6,7 @@ const event = (data: IEventData) => {
     let main = (Target: Class<BaseEvent>) => {
         return class extends Target {
             constructor(...args: any[]) {
-                super(data, ...args)
+                super(data, undefined, true, ...args)
             }
         }
     }
