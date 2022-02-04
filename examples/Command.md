@@ -54,7 +54,7 @@ class ExampleCommand extends BaseCommand {
         category: 'misc'
     }
     
-    public exec = (client, message, args) => {
+    public exec = (message, args) => {
         message.channel!.sendMessage('Hello There!')
     }
 }
@@ -75,7 +75,7 @@ class ExampleCommand extends BaseCommand {
         category: 'misc'
     }
     
-    exec = (client, message, args) => {
+    exec = (message, args) => {
         message.channel.sendMessage('Hello There!')
     }
 }
@@ -98,7 +98,7 @@ import { BaseCommand, command } from 'lightning'
     category: 'misc'
 })
 class ExampleCommand extends BaseCommand {
-    public exec = (client, message, args) => {
+    public exec = (message, args) => {
         message.channel!.sendMessage('Hello There!')
     }
 }
