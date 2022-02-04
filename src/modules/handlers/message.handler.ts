@@ -1,5 +1,7 @@
 import { Message } from 'revolt.js/dist/maps/Messages'
 import { LTNClient } from '../../client'
+import { BaseCommand } from '../../bases/command'
+import { ICommandExec } from '../../typings'
 
 const messageHandler = (
     client: LTNClient,
@@ -32,7 +34,8 @@ const messageHandler = (
     }
 
     try {
-        command.exec(client, message, args)
+        if (command instanceof BaseCommand) command.exec(message, args)
+        else (command.exec as ICommandExec)(client, message, args)
     } catch (err) {
         client.logger.error(
             `There was an error running the command '${command.data.name}'!`,
