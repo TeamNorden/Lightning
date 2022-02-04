@@ -37,7 +37,7 @@ const commandHandler = async (client: LTNClient) => {
             } else {
                 let CommandClass = req.default as Class<BaseCommand>
 
-                command = new CommandClass()
+                command = new CommandClass(undefined, client)
 
                 if (!(command instanceof BaseCommand)) {
                     return client.logger.error(

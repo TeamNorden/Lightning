@@ -28,7 +28,7 @@ const eventHandler = async (client: LTNClient) => {
         } else {
             let EventClass = req.default as Class<BaseEvent>
 
-            event = new EventClass()
+            event = new EventClass(undefined, client)
 
             if (!(event instanceof BaseEvent)) {
                 throw new TypeError(
