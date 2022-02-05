@@ -34,8 +34,10 @@ lightning-js new <your project's name>
 If you want to start from scratch, here's an example on how you could start:
 
 ```typescript
-    import { LTNClient, Strictness } from 'lightning'
+    import { LTNClient, Strictness, getDirname } from 'lightning'
     import path from 'path'
+
+    const __dirname = getDirname(import.meta.url)
 
     const client = new LTNClient({
         commandsDir: path.join(__dirname, 'commands'),
@@ -46,7 +48,7 @@ If you want to start from scratch, here's an example on how you could start:
             strictness: Strictness.MODERATE // HIGH | MODERATE | LOW
         },
         database: { // optional
-            uri: 'mongodb connection string'
+            uri: 'mongodb connection string',
             caching: true, // if you want local cache
             typegoose: true, // if you're using typegoose
         }
