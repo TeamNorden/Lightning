@@ -7,11 +7,8 @@ export * from './bases/event'
 // Typings
 export * from './typings'
 
-// Logger
-export { default as Logger } from './modules/utils/Logger'
-
-// Dirname
-export { default as getDirname } from './modules/utils/getDirname'
+// Utils
+export * from './modules/utils'
 
 // DB
 export { default as Database } from './modules/database'
