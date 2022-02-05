@@ -14,13 +14,19 @@ const commandHandler = async (client: LTNClient) => {
     const { structureType } = client.config
 
     for (let folder of categories) {
-        let folderFiles = readdirSync(path.join(commandDir, folder)).filter((file) => {
-                return ['.js', '.ts'].includes(path.extname(file)) && !file.endsWith('.d.ts')
+        let folderFiles = readdirSync(path.join(commandDir, folder)).filter(
+            (file) => {
+                return (
+                    ['.js', '.ts'].includes(path.extname(file)) &&
+                    !file.endsWith('.d.ts')
+                )
             }
         )
 
         for (let file of folderFiles) {
-            let filePath = pathToFileURL(path.join(commandDir, folder, file)).toString()
+            let filePath = pathToFileURL(
+                path.join(commandDir, folder, file)
+            ).toString()
 
             let req = await import(filePath)
 
