@@ -17,7 +17,7 @@ export interface ICommandData {
 }
 
 export interface ICommandExec {
-     (client: LTNClient, message: Message, args: string[]): any
+    (client: LTNClient, message: Message, args: string[]): any
 }
 
 export interface IClassBasedCommandExec {

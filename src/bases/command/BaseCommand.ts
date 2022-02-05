@@ -9,7 +9,11 @@ class BaseCommand implements ICommand {
 
     public client!: LTNClient
 
-    constructor(data?: ICommandData, client?: LTNClient, fromDecorator?: boolean) {
+    constructor(
+        data?: ICommandData,
+        client?: LTNClient,
+        fromDecorator?: boolean
+    ) {
         if (data) this.data = data
 
         if (client) this.client = client

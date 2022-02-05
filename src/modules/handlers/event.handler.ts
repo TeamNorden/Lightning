@@ -12,8 +12,10 @@ const eventHandler = async (client: LTNClient) => {
     const { eventDir } = client
     const { structureType } = client.config
 
-    let eventFiles = readdirSync(client.eventDir).filter((file) =>
-        ['.js', '.ts'].includes(path.extname(file)) && !file!.endsWith('d.ts')
+    let eventFiles = readdirSync(client.eventDir).filter(
+        (file) =>
+            ['.js', '.ts'].includes(path.extname(file)) &&
+            !file!.endsWith('d.ts')
     )
 
     for (let file of eventFiles) {
