@@ -16,12 +16,14 @@ import {
 } from '../typings'
 
 // Handlers
-import eventHandler from '../modules/handlers/event.handler'
-import commandHandler from '../modules/handlers/command.handler'
-import messageHandler from '../modules/handlers/message.handler'
+import {
+    commandHandler,
+    eventHandler,
+    messageHandler
+} from '../modules/handlers'
 
 // Utils
-import LTNLogger from '../modules/utils/Logger'
+import { LTNLogger } from '../modules/utils'
 
 // Database
 import Database from '../modules/database'
