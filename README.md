@@ -57,7 +57,7 @@ If you want to start from scratch, here's an example on how you could start:
     client.start('your token')
 ```
 
-Lightning is fully ESM, so `require()` syntax cannot be used.
+Lightning is fully ESM, so `require()` syntax and global variables like `__dirname` cannot be used (you can import getDirname from the lib and use it as shown above).
 
 To run on javascript use the `node --experimental-specifier-resolution=node <file>` flag!
 
